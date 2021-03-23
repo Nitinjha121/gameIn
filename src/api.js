@@ -1,7 +1,9 @@
 // Base URL
 
+const api_key = process.env.REACT_APP_API_KEY;
+
 const baseUrl = (query, date = "") =>
-  `https://api.rawg.io/api/${query}?key=${process.env.REACT_APP_API_KEY}&${date}`;
+  `https://api.rawg.io/api/${query}?key=${api_key}&${date}`;
 
 //Getting the dates
 
