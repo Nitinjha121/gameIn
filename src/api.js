@@ -31,3 +31,14 @@ export const newGamesUrl = baseUrl(
   "games",
   `dates=${lastYear},${currentDate}&ordering=-released&page_size=10`
 );
+
+export const gameDetailsUrl = (gameId) => baseUrl(`games/${gameId}`);
+
+// Game Screenshot
+export const gameScreenshotUrl = (gameId) =>
+  baseUrl(`games/${gameId}/screenshots`);
+
+//Search games
+
+export const searchGamesUrl = (game_name) =>
+  baseUrl(`games`, `search=${game_name}&page_size=9`);

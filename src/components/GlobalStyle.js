@@ -1,9 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-margin:0;
+
+*{
+    margin:0;
 padding:0;
 box-sizing:border-box;
+}
 html{
     &::-webkit-scrollbar{
         width:0.5rem;
@@ -12,10 +15,15 @@ html{
     &::-webkit-scrollbar-thumb{
         background-color:darkgray;
     }
+    
 }
 
 body{
         font-family:"Montserrat", sans-serif;
+        width:100%;
+        overflow-x:hidden;
+    }
+    .App{
         width:100%;
     }
 
@@ -29,7 +37,7 @@ body{
     h3{
         font-size:1.3rem;
         color:#333;
-        padding:1.5rem;
+        padding:1.5rem 0rem;
     }
 
     p{
@@ -42,6 +50,11 @@ body{
         text-decoration:none;
         color:#333;
     }
+
+    img{
+        display:block;
+    }
+
 `;
 
 export default GlobalStyle;
